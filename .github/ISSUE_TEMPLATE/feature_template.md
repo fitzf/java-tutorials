@@ -1,3 +1,9 @@
+---
+name: Feature
+about: Use this template for tracking new features.
+title: "[FEATURE NAME]"
+labels: "type::feature"
+---
 ### Problem to solve
 
 <!-- What problem do we solve? -->
@@ -11,5 +17,3 @@
 <!-- Define both the success metrics and acceptance criteria. -->
 
 ### Links / references
-
-/label ~"type::feature"

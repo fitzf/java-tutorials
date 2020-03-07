@@ -1,3 +1,9 @@
+---
+name: Bug
+about: Use this template for tracking bug report.
+title: "[BUG NAME]"
+labels: "type::bug"
+---
 <!---
 Please read this!
 
@@ -33,5 +39,3 @@ and verify the issue you're about to submit isn't a duplicate.
 logs, and code as it's very hard to read otherwise.)
 
 ### Environment
-
-/label ~"type::bug"
