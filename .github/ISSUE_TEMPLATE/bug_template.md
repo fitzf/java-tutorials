@@ -39,3 +39,8 @@ and verify the issue you're about to submit isn't a duplicate.
 logs, and code as it's very hard to read otherwise.)
 
 ### Environment
+<<<<<<< HEAD
+=======
+
+/label ~"type::bug"
+>>>>>>> origin/master
