@@ -19,4 +19,10 @@ allprojects {
         maven { url = uri("https://maven.aliyun.com/repository/public/") }
         mavenCentral()
     }
+
+    configurations.all {
+        resolutionStrategy {
+            force("org.slf4j:slf4j-api:1.7.30")
+        }
+    }
 }

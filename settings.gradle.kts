@@ -10,4 +10,4 @@
 rootProject.name = "java-tutorials"
 
 include("dynamic-proxy")
-
+include("distributed-lock")
