@@ -4,10 +4,12 @@ stages:
   - build
   - build_and_test
 
+variables:
+  MAVEN_OPTS: "--batch-mode -Dmaven.repo.local=.m2/repository"
+
 cache:
   paths:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+    - .m2/repository/
 
 job_test:
   stage: build_and_test
@@ -16,4 +18,4 @@ job_test:
   before_script:
     - java -version
   script:
-    - ./gradlew clean test --fail-fast
+    - ./mvnw $MAVEN_OPTS clean test
