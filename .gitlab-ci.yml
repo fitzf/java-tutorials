@@ -4,9 +4,6 @@ stages:
   - build
   - build_and_test
 
-variables:
-  MAVEN_OPTS: "--batch-mode -Dmaven.repo.local=.m2/repository"
-
 cache:
   paths:
     - .m2/repository/
@@ -18,4 +15,4 @@ job_test:
   before_script:
     - java -version
   script:
-    - ./mvnw $MAVEN_OPTS clean test
+    - ./mvnw -B -Dmaven.repo.local=.m2/repository clean test
