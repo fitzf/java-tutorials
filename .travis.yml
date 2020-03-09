@@ -1,0 +1,16 @@
+language: java
+
+jdk:
+  - openjdk11
+  - openjdk8
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+# https://docs.travis-ci.com/user/job-lifecycle/#skipping-the-installation-phase use gradlew commands in this project, so skipping the installation phase
+install: skip
+
+script:
+  - ./gradlew clean test --fail-fast

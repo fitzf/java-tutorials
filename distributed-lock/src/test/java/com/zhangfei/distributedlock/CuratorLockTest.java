@@ -28,7 +28,7 @@ public class CuratorLockTest {
     // 请求次数
     private static final int REPETITIONS = QTY * 5;
 
-    private static final String LOCK_PATH = "/distributed-lock";
+    private static final String LOCK_PATH = "/tutorials/distributed-lock";
 
     private static TestingCluster cluster;
 
@@ -56,7 +56,7 @@ public class CuratorLockTest {
                 try {
                     ExampleClientThatLock example = new ExampleClientThatLock(client, LOCK_PATH, resource, "Client " + index);
                     for (int j = 0; j < REPETITIONS; ++j) {
-                        example.doWork(5, TimeUnit.SECONDS);
+                        example.doWork(2, TimeUnit.SECONDS);
                     }
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
