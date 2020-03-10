@@ -1,0 +1,18 @@
+image: openjdk:8-jdk
+
+stages:
+  - build
+  - build_and_test
+
+cache:
+  paths:
+    - .m2/repository/
+
+job_test:
+  stage: build_and_test
+  tags:
+    - docker
+  before_script:
+    - java -version
+  script:
+    - ./mvnw -B -Dmaven.repo.local=.m2/repository clean test
