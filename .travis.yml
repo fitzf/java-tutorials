@@ -14,4 +14,4 @@ services:
 install: skip
 
 script:
-  - ./mvnw -B -DREDIS_SINGLE_SERVER=localhost:6379 clean test
+  - ./mvnw -B -DREDIS_SINGLE_SERVER=localhost:6379 -DLOG_LEVEL=WARN clean test

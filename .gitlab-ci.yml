@@ -18,4 +18,4 @@ job_test:
   before_script:
     - java -version
   script:
-    - ./mvnw -B -Dmaven.repo.local=.m2/repository -DREDIS_SINGLE_SERVER=redis:6379 clean test
+    - ./mvnw -B -Dmaven.repo.local=.m2/repository -DLOG_LEVEL=WARN -DREDIS_SINGLE_SERVER=redis:6379 clean test
