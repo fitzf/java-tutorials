@@ -7,8 +7,11 @@ cache:
   directories:
     - $HOME/.m2/
 
+services:
+  - redis-server
+
 # https://docs.travis-ci.com/user/job-lifecycle/#skipping-the-installation-phase use gradlew commands in this project, so skipping the installation phase
 install: skip
 
 script:
-  - ./mvnw -B clean test
+  - ./mvnw -B -DREDIS_SINGLE_SERVER=localhost:6379 clean test

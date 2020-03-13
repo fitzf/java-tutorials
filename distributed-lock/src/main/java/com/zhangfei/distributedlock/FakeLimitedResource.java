@@ -1,7 +1,6 @@
 package com.zhangfei.distributedlock;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -23,7 +22,7 @@ public class FakeLimitedResource {
         }
 
         try {
-            TimeUnit.SECONDS.sleep(random.nextInt(5));
+            Thread.sleep(random.nextInt(100));
         } finally {
             inUse.set(false);
         }
